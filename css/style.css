@@ -1,0 +1,156 @@
+@charset "UTF-8";
+html {
+	overflow-y: scroll;
+    /* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+/* リセットおまじない--------------------------------- */
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	outline: none;
+	color: inherit;
+	text-decoration: none;
+}
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+/* --------------------------------------------------- */
+
+body {
+	font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+color: rgb(41, 10, 10);
+}
+
+/* ここから講義コード */
+
+/* どこの{
+    なにを:どうする;
+} */
+/* セレクタ{
+    プロパティ:値;
+} */
+
+#about,#gallery,#info,#faq{
+    width: 80%;
+    margin: 100px auto;
+}
+
+
+header{
+    width: 100%;
+    height: 70px; 
+    background-color: rgba(244, 28, 28, 0.79);
+    color: rgb(252, 206, 182);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+header nav{
+    width: 60%;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+#mainVisual{
+    width: 100%;
+    height: 85vh;
+    background: url("../img/jasmine-bartel-8LtrMQfeDkQ-unsplash.jpg") no-repeat top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#about,#info{
+    display: flex;
+    align-items: center;
+}
+
+
+#about img{
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#about .about_box,#info .info_box{
+    width: 50%;
+    padding: 30px;
+}
+
+#gallery .gallery_cards{
+    width: 90%;
+    column-count: 3;
+    column-gap: 0;
+    margin: 0 auto;
+}
+
+
+#gallery .gallery_cards .item{
+    padding: 5px;
+}
+
+#gallery .gallery_cards img{
+    width: 100%;
+}
+
+#faq summary{
+    background-color: rgb(249, 232, 235);
+    text-align: left;
+    padding: 10px 30px;
+}
+
+#faq p{
+    text-align: left;
+    padding: 10px 30px;
+
+}
+
+@media screen and (max-width:800px) {
+
+
+}
+
+
+
+
+@media screen and (max-width:478px) {
+    
+    body{
+        background-color: blue;
+    }
+
+    #about,#info{
+        flex-direction: column;
+    }
+
+    #info iframe{
+        width: 100%;
+    }
+}
+
+
